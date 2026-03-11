@@ -879,14 +879,8 @@ saveData();
 
 }
 
-window.onload=loadData;
-
 window.onload = function(){
     loadData();
-    // 強制的にボタンを再描画
-    document.querySelectorAll(".plan").forEach(plan=>{
-        plan.style.display="flex";
-    });
 };
 
 
