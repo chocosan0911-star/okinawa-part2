@@ -958,6 +958,28 @@ location.reload();
 
 
 
+
+function editPlan(btn){
+
+let plan = btn.closest(".plan");
+let span = plan.querySelector("span");
+
+let currentText = span.innerText.split(" ").slice(1).join(" ");
+
+let newText = prompt("予定を編集してください", currentText);
+
+if(newText !== null && newText.trim() !== ""){
+
+span.innerText = span.innerText.split(" ")[0] + "  " + newText.trim();
+
+saveData();
+
+}
+
+}
+
+
+
 </script>
 
 </body>
